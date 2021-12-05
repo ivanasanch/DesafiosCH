@@ -57,17 +57,27 @@ nav {
 }
 .menu li a {
     text-decoration: none;
-    color:#f19444
+    color:#f19444;
+    transition: all 0.5s;
 }
 .menu li a:hover {
-    font-weight: 700;
+    text-shadow:5px 5px 10px grey;
     color: #7d341e;
 }
 .logo {
     margin: 5%;
     width: 10%;
     border-radius: 100px;
+    animation: rotation 8s infinite linear;
 }
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 .banner {
     width: 100%;
     height: 300px;
@@ -143,12 +153,13 @@ h2 {
     border-radius:5px;
     border-style: none;
     background-color: #f19444;
+    transition: all 0.5s;
 }
-.btn:hover {
+.btn button:hover {
+    box-shadow:5px 10px 18px grey;
     background-color: #7d341e;
     color: white;
 }
-
 .secRecetas {
     display: flex;
     flex-direction: row;
@@ -158,6 +169,11 @@ h2 {
 }
 .imgReceta {
     width: 300px;
+    transition: all 1s;
+}
+.imgReceta:hover {
+    filter: drop-shadow(5px 5px 5px grey);
+
 }
 .secProductos{
     display: grid;
@@ -172,6 +188,10 @@ h2 {
 }
 .producto img{
     width: 200px;
+    transition: all 1s;
+}
+.producto img:hover {
+    filter: drop-shadow(5px 5px 5px #3a342e);
 }
 .centrar {
     width: 70%;
